@@ -10,7 +10,7 @@ content: |-
 
   ## Network watcher
   ```hcl
-  {{ include "examples/network_watcher-example/main.tf" }}
+  {{ include "examples/network-watcher-flow-log-example/main.tf" }}
   ```
 
   {{ .Providers }}
