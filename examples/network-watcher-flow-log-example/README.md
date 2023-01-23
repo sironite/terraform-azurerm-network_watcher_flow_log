@@ -1,6 +1,6 @@
-# Terraform module | AzureRM - Network Security Group
+# Terraform module | AzureRM - Network Watcher Flow Log
 
-This Terraform module is designed to create a Network Security Group for Azure.
+This Terraform module is designed to create a Network Watcher Flow Log for Azure.
 
 ## Pre-requisites
 
@@ -9,16 +9,23 @@ Using the modules requires the following pre-requisites:
 
 ## Usage
 
-`resource_group`
+`Network Watcher Flow Log`
 
 ```hcl
-module "network_watcher" {
-  source  = "sironite/network_watcher/azurerm"
+module "network_watcher_flow_log" {
+  source  = "sironite/network_watcher_flow_log/azurerm"
   version = "x.x.x"
 
-  azure_location              = var.azure_location
-  network_security_group_name = var.network_watcher_name
-  resource_group_name         = var.resource_group_name
+  network_watcher_flow_log_name = var.network_watcher_flow_log_name
+
+  network_watcher_name      = var.network_watcher_name
+  resource_group_name       = var.resource_group_name
+  network_security_group_id = var.network_security_group_id
+  storage_account_id        = var.storage_account_id
+
+  workspace_id          = var.workspace_id
+  workspace_region      = var.azure_location
+  workspace_resource_id = var.workspace_resource_id
 }
 
 ```

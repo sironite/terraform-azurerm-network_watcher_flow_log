@@ -1,23 +1,24 @@
 resource "azurerm_network_watcher_flow_log" "this" {
-  network_watcher_name = azurerm_network_watcher.test.name
+  network_watcher_name = var.network_watcher_name
   resource_group_name  = var.resource_group_name
   name                 = var.network_watcher_flow_log_name
 
-  network_security_group_id = azurerm_network_security_group.test.id
-  storage_account_id        = azurerm_storage_account.test.id
-  enabled                   = true
+  network_security_group_id = var.network_security_group_id
+  storage_account_id        = var.storage_account_id
+  enabled                   = var.network_watcher_flow_log_enabled
+  version                   = var.network_watcher_flow_log_version
 
   retention_policy {
-    enabled = true
-    days    = 7
+    enabled = var.retention_policy_enabled
+    days    = var.retention_policy_days
   }
 
   traffic_analytics {
-    enabled               = true
-    workspace_id          = azurerm_log_analytics_workspace.test.workspace_id
-    workspace_region      = azurerm_log_analytics_workspace.test.location
-    workspace_resource_id = azurerm_log_analytics_workspace.test.id
-    interval_in_minutes   = 10
+    enabled               = var.traffic_analytics_enabled
+    workspace_id          = var.workspace_id
+    workspace_region      = var.workspace_region
+    workspace_resource_id = var.workspace_resource_id
+    interval_in_minutes   = var.traffic_analytics_interval_in_minutes
   }
 
   tags = var.tags

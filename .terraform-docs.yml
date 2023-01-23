@@ -8,7 +8,7 @@ content: |-
 
   # Usage - Module
 
-  ## Network watcher
+  ## Network Watcher Flow Log
   ```hcl
   {{ include "examples/network-watcher-flow-log-example/main.tf" }}
   ```
