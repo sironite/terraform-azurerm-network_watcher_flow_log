@@ -6,11 +6,13 @@ footer-from: "docs/footer-doc.tf"
 content: |-
   {{ .Header }}
 
-  # Examples
+  # Usage - Module
 
+  ## Network Watcher Flow Log
   ```hcl
-  {{ include "examples/example1/module.tf" }}
+  {{ include "examples/network-watcher-flow-log-example/main.tf" }}
   ```
+
   {{ .Providers }}
 
   {{ .Modules }}
