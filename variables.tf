@@ -41,7 +41,7 @@ variable "retention_policy_enabled" {
   sensitive   = false
   default     = true
 }
-variable "retention_policy_days " {
+variable "retention_policy_days" {
   description = "The number of days to retain flow log records."
   type        = number
   sensitive   = false
