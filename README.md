@@ -53,7 +53,7 @@ No modules.
 | workspace\_resource\_id | The resource ID of the attached workspace. | `string` | yes |
 | network\_watcher\_flow\_log\_enabled | Should Network Flow Logging be Enabled | `bool` | no |
 | network\_watcher\_flow\_log\_version | The version (revision) of the flow log. Possible values are `1` and `2`. | `number` | no |
-| retention\_policy\_days  | The number of days to retain flow log records. | `number` | no |
+| retention\_policy\_days | The number of days to retain flow log records. | `number` | no |
 | retention\_policy\_enabled | Boolean flag to enable/disable retention. | `bool` | no |
 | tags | A mapping of tags to assign to the resource. | `map(any)` | no |
 | traffic\_analytics\_enabled | Boolean flag to enable/disable traffic analytics. | `bool` | no |
